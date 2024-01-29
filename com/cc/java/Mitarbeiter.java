@@ -16,8 +16,16 @@ public class Mitarbeiter {
 
 
 	public String getInfo(String flag) {
-		// switch ..
-		return null;
+		switch (flag) {
+			case "#name":
+				return this.firstName +" " + this.familyName;
+			case "#position":
+				return this.role;
+			case "#time":
+				return Integer.toString(this.yearOfEntry);
+			default:
+			return "ERROR";
+		}
 	}
 
 }
